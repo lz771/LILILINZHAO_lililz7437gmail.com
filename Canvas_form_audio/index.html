@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width" />
+        <title>Interactive Canvas Scene with Forms</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <canvas id="myCanvas" width="500" height="300">Your browser do not supports canvas</canvas>
+        
+        <form action="/action_page.php">
+            <h3>Select an image background for the canvas</h3>
+            <label><input type="radio" id="bg1" name="backgrounds">Background 1</label><br>
+            <label><input type="radio" id="bg2" name="backgrounds">Background 2</label><br>
+            <label><input type="radio" id="bg3" name="backgrounds">Background 3</label><br><br>
+
+            <h3>Select items to show up on the canvas</h3>
+            <label><input type="checkbox" id="item1" name="items">Item 1</label><br>
+            <label><input type="checkbox" id="item2" name="items">Item 2</label><br>
+            <label><input type="checkbox" id="item3" name="items">Item 3</label><br><br>
+
+
+            <h3>Use the slider to control the movement of the character bird</h3>
+            <input type="range" min="-100" max="300" value="30" id="xRange" class="slider" onclick="drawScene()"><br><br>
+
+            <h3>Sound effect options:</h3>
+            <button type="button" onclick="playSound('audios/sound1.mp3')">Sound effect 1</button>
+            <button type="button" onclick="playSound('audios/sound2.mp3')">Sound effect 2</button>
+            <button type="button" onclick="playSound('audios/sound3.mp3')">Sound effect 3</button><br><br>
+        </form>
+      
+        <script src="main.js"></script>
+    </body>
+</html>
+
